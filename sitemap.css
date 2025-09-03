@@ -1,26 +1,28 @@
-/* Aturan dasar untuk membuat tabel responsif */
+/* --- CSS untuk Peta Situs --- */
+
+/* Membuat tabel responsif */
 .responsive-table {
   overflow-x: auto;
 }
 
-/* Aturan untuk tabel halaman statis */
+/* Menggabungkan semua aturan styling untuk tabel (baik statis maupun dinamis) */
 .static-page-table {
   width: 100%;
   border-collapse: collapse;
   text-align: left;
-  border: 1px solid black;
 }
 
-.static-page-table th, .static-page-table td {
-  border: 1px solid black;
+.static-page-table th, 
+.static-page-table td {
+  border: 1px solid #ddd;
   padding: 8px;
 }
 
 .table-header {
-  background: #f2f2f2;
+  background: #f9f9f9;
 }
 
-/* Aturan lain untuk tampilan halaman */
+/* --- Gaya Tambahan untuk Elemen Halaman --- */
 .wrapper-xy {
   max-width: 980px;
   margin: auto;
