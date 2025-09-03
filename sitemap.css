@@ -1,0 +1,9 @@
+<div class="responsive-table">
+  <table border="1" cellspacing="0" cellpadding="8" style="width:100%; border-collapse: collapse; text-align:left;">
+    </table>
+</div>
+
+.responsive-table {
+  overflow-x: auto;
+  /* Aturan lain jika perlu, misalnya styling untuk scrollbar */
+}
