@@ -2,17 +2,20 @@
 Untuk Warna disini! 
 */
 
-/* --- [MODIFIKASI] Tombol CTA Warna Wortel --- */
+/* --- [MODIFIKASI] Tombol CTA Warna Orange --- */
 .btn-cta-wortel {
-  background-color: #FF7A00 !important; /* Warna oranye wortel */
-  color: #ffffff !important; /* Teks warna putih agar kontras */
-  border-color: #E66E00 !important; /* Border sedikit lebih gelap */
+  background-color: #e67e22 !important; /* Warna oranye baru */
+  color: #ffffff !important; /* Teks warna putih */
+  border-color: #d35400 !important; /* Border sedikit lebih gelap */
+  font-weight: 600;
 }
 
-/* Efek saat kursor di atas tombol */
+/* Efek saat kursor menyentuh tombol */
 .btn-cta-wortel:hover {
-  background-color: #E66E00 !important; /* Warna oranye lebih gelap */
-  color: #ffffff !important;
+  background-color: #ffffff !important; /* Warna menjadi lebih gelap */
+  color: #d35400 !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
 }
 
 /*
