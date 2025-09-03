@@ -56,3 +56,39 @@ body.staticpage #article-share {
   display: none !important;
   /* Properti lainnya boleh ditambahkan jika diperlukan */
 }
+
+
+/* --- CSS untuk Peta Situs --- */
+
+/* Membuat tabel responsif */
+.responsive-table {
+  overflow-x: auto;
+}
+
+/* Menggabungkan semua aturan styling untuk tabel (baik statis maupun dinamis) */
+.static-page-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.static-page-table th, 
+.static-page-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.table-header {
+  background: #f9f9f9;
+}
+
+/* --- Gaya Tambahan untuk Elemen Halaman --- */
+.wrapper-xy {
+  max-width: 980px;
+  margin: auto;
+}
+.card {
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  padding: 2rem;
+  border-radius: 0.5rem;
+}
