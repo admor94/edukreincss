@@ -96,7 +96,7 @@ Untuk Warna disini!
   100% { background-position: 0% 50%, 50% 100%, 100% 50%; }
 }
 .aurora-effect {
-  background-color: var(--ds-grey); /* Latar belakang gelap agar aurora terlihat */
+  background-color: var(--ds-dark); /* Latar belakang gelap agar aurora terlihat */
   background-image: 
     radial-gradient(at 0% 100%, var(--ds-purple) 0px, transparent 50%),
     radial-gradient(at 80% 0%, var(--ds-blue) 0px, transparent 50%),
