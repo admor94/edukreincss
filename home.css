@@ -43,3 +43,21 @@
 .accordion-custom .accordion-body {
   text-align: left;
 }
+
+
+/* 
+Untuk Warna disini! 
+*/
+
+/* --- [MODIFIKASI] Tombol CTA Warna Wortel --- */
+.btn-cta-wortel {
+  background-color: #FF7A00 !important; /* Warna oranye wortel */
+  color: #ffffff !important; /* Teks warna putih agar kontras */
+  border-color: #E66E00 !important; /* Border sedikit lebih gelap */
+}
+
+/* Efek saat kursor di atas tombol */
+.btn-cta-wortel:hover {
+  background-color: #E66E00 !important; /* Warna oranye lebih gelap */
+  color: #ffffff !important;
+}
