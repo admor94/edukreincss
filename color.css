@@ -86,26 +86,6 @@ Untuk Warna disini!
 }
 
 /* ------------------------------------------- */
-/* 5. Efek Aurora (Aurora Effect)        */
-/* ------------------------------------------- */
-@keyframes auroraEffect {
-  0% { background-position: 0% 50%, 50% 100%, 100% 50%; }
-  25% { background-position: 50% 0%, 100% 100%, 0% 0%; }
-  50% { background-position: 100% 50%, 50% 0%, 0% 50%; }
-  75% { background-position: 50% 100%, 0% 0%, 100% 100%; }
-  100% { background-position: 0% 50%, 50% 100%, 100% 50%; }
-}
-.aurora-effect {
-  background-color: var(--ds-dark); /* Latar belakang gelap agar aurora terlihat */
-  background-image: 
-    radial-gradient(at 0% 100%, var(--ds-purple) 0px, transparent 50%),
-    radial-gradient(at 80% 0%, var(--ds-blue) 0px, transparent 50%),
-    radial-gradient(at 50% 100%, var(--ds-green) 0px, transparent 50%);
-  background-size: 200% 200%;
-  animation: auroraEffect 31s ease-in-out infinite;
-}
-
-/* ------------------------------------------- */
 /* 6. Riak Warna (Color Ripple)          */
 /* ------------------------------------------- */
 @keyframes colorRipple {
@@ -198,41 +178,51 @@ Untuk Warna disini!
   animation: gradientRotation 8s linear infinite;
 }
 
-/* ------------------------------------------- */
-/* 5. Efek Aurora (Aurora Effect)        */
-/* ------------------------------------------- */
-@keyframes auroraEffect2 {
+/*
+==============================================
+  VARIAN EFEK AURORA - EDUKREIN
+==============================================
+*/
+
+/* 1. Definisikan Animasi Gerakannya (Cukup Satu Kali) */
+@keyframes auroraEffect {
   0% { background-position: 0% 50%, 50% 100%, 100% 50%; }
   25% { background-position: 50% 0%, 100% 100%, 0% 0%; }
   50% { background-position: 100% 50%, 50% 0%, 0% 50%; }
   75% { background-position: 50% 100%, 0% 0%, 100% 100%; }
   100% { background-position: 0% 50%, 50% 100%, 100% 50%; }
 }
-.aurora-effect2 {
-  background-color: var(--ds-dark); /* Latar belakang gelap agar aurora terlihat */
+
+/* 2. Buat Kelas Dasar untuk Efek Aurora */
+/* Kelas ini berisi semua properti yang sama untuk semua varian */
+.aurora-effect {
+  background-color: #020617; /* Latar belakang biru sangat gelap */
+  background-size: 200% 200%;
+  animation: auroraEffect 25s ease-in-out infinite;
+}
+
+/* 3. Buat Kelas Varian Warna (hanya berisi yang berbeda) */
+
+/* Varian 1: Dominan Ungu & Biru */
+.aurora-ungu {
+  background-image: 
+    radial-gradient(at 0% 100%, var(--ds-purple) 0px, transparent 50%),
+    radial-gradient(at 80% 0%, var(--ds-blue) 0px, transparent 50%),
+    radial-gradient(at 50% 100%, var(--ds-green) 0px, transparent 50%);
+}
+
+/* Varian 2: Dominan Hijau & Ungu */
+.aurora-hijau {
   background-image: 
     radial-gradient(at 0% 100%, var(--ds-green) 0px, transparent 50%),
     radial-gradient(at 80% 0%, var(--ds-purple) 0px, transparent 50%),
     radial-gradient(at 50% 100%, var(--ds-blue) 0px, transparent 50%);
-  background-size: 200% 200%;
-  animation: auroraEffect 31s ease-in-out infinite;
 }
-/* ------------------------------------------- */
-/* 5. Efek Aurora (Aurora Effect)        */
-/* ------------------------------------------- */
-@keyframes auroraEffect1 {
-  0% { background-position: 0% 50%, 50% 100%, 100% 50%; }
-  25% { background-position: 50% 0%, 100% 100%, 0% 0%; }
-  50% { background-position: 100% 50%, 50% 0%, 0% 50%; }
-  75% { background-position: 50% 100%, 0% 0%, 100% 100%; }
-  100% { background-position: 0% 50%, 50% 100%, 100% 50%; }
-}
-.aurora-effect1 {
-  background-color: var(--ds-dark); /* Latar belakang gelap agar aurora terlihat */
+
+/* Varian 3: Dominan Biru & Hijau */
+.aurora-biru {
   background-image: 
     radial-gradient(at 0% 100%, var(--ds-blue) 0px, transparent 50%),
     radial-gradient(at 80% 0%, var(--ds-purple) 0px, transparent 50%),
     radial-gradient(at 50% 100%, var(--ds-green) 0px, transparent 50%);
-  background-size: 200% 200%;
-  animation: auroraEffect 31s ease-0ut-in infinite;
 }
