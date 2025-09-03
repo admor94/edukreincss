@@ -1,1 +1,5 @@
-
+.footnote-link {
+    /* ... kode CSS lainnya ... */
+    vertical-align: super;
+    font-size: 0.7em; /* Ukuran font lebih kecil agar tidak terlalu besar di atas */
+}
