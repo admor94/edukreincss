@@ -196,7 +196,7 @@ Untuk Warna disini!
 /* 2. Buat Kelas Dasar untuk Efek Aurora */
 /* Kelas ini berisi semua properti yang sama untuk semua varian */
 .aurora-effect {
-  background-color: #020617; /* Latar belakang biru sangat gelap */
+  background-color: var(--ds-dark); /* Latar belakang biru sangat gelap */
   background-size: 200% 200%;
   animation: auroraEffect 25s ease-in-out infinite;
 }
