@@ -40,9 +40,11 @@ Untuk Warna disini!
   100% { background-position: 0% 50%; }
 }
 .wavy-gradient {
-  background: linear-gradient(-45deg, var(--ds-purple), var(--ds-blue), var(--ds-green), var(--ds-yellow));
+  background-color: var(--ds-dark);
+  background-image:
+    linear-gradient(-45deg, var(--ds-purple), var(--ds-blue), var(--ds-green));
   background-size: 400% 400%;
-  animation: wavyGradient 15s ease infinite;
+  animation: wavyGradient 19s ease infinite;
 }
 
 /* ------------------------------------------- */
@@ -98,11 +100,11 @@ Untuk Warna disini!
 .aurora-effect {
   background-color: var(--ds-dark); /* Latar belakang gelap agar aurora terlihat */
   background-image: 
-    radial-gradient(at 0% 100%, var(--ds-orange) 0px, transparent 50%),
+    radial-gradient(at 0% 100%, var(--ds-purple) 0px, transparent 50%),
     radial-gradient(at 80% 0%, var(--ds-blue) 0px, transparent 50%),
     radial-gradient(at 50% 100%, var(--ds-green) 0px, transparent 50%);
   background-size: 200% 200%;
-  animation: auroraEffect 17s ease-in-out infinite;
+  animation: auroraEffect 19s ease-in-out infinite;
 }
 
 /* ------------------------------------------- */
