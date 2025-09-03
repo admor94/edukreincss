@@ -1,5 +1,7 @@
-.footnote-link {
-    /* ... kode CSS lainnya ... */
+span[data-bs-toggle="tooltip"] {
     vertical-align: super;
-    font-size: 0.7em; /* Ukuran font lebih kecil agar tidak terlalu besar di atas */
+    font-size: 0.7em;
+    cursor: pointer;
+    text-decoration: none;
+    color: inherit;
 }
