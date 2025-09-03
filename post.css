@@ -1,55 +1,47 @@
-/* Pastikan ini ada di file style.css Anda */
+/* Styling untuk penempatan tooltip */
 .footnote-link {
     font-size: 0.7em;
     vertical-align: super;
     cursor: pointer;
     text-decoration: none;
-    color: #007bff; /* Sesuaikan warna jika perlu */
+    color: inherit; /* Mengikuti warna teks di sekitarnya */
     border: none;
     outline: none;
     position: relative; /* Penting untuk memposisikan tooltip */
 }
 
-/* Tooltip container yang menampung konten */
+/* Kotak tooltip yang menampung konten */
 .tooltip-container {
     visibility: hidden;
     opacity: 0;
     position: absolute;
-    z-index: 10;
+    z-index: 100;
     
-    /* Atur penempatan tooltip agar muncul di bawah dan sedikit di kanan link */
+    /* Posisikan di bawah tautan */
     top: 100%;
     left: 50%;
     transform: translateX(-50%) translateY(5px);
 
     /* Animasi transisi yang halus */
-    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out; 
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 
-/* Konten di dalam tooltip */
-.tooltip-content {
-    background-color: #333;
-    color: #fff;
-    padding: 10px 14px;
-    border-radius: 6px;
-    white-space: normal; /* Biarkan teks membungkus */
-    min-width: 150px;
-    max-width: 250px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-    font-size: 0.9rem;
-    line-height: 1.4;
+/* Teks atau isi di dalam tooltip */
+.tooltip-content-inner {
+    background-color: var(--ds-body-bg); /* Latar belakang mengikuti warna body tema */
+    color: var(--ds-body-color);
+    padding: 1rem;
+    border-radius: 8px;
+    width: 320px; /* Ukuran yang ideal untuk kartu pop-up */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15); /* Bayangan yang jelas */
+    white-space: normal;
+    font-size: 14px;
+    line-height: 1.6;
 }
 
-/* Panah kecil di atas tooltip */
-.tooltip-container::before {
-    content: "";
-    position: absolute;
-    bottom: 100%;
-    left: 50%;
-    margin-left: -8px;
-    border-width: 8px;
-    border-style: solid;
-    border-color: transparent transparent #333 transparent;
+/* Menghilangkan efek garis bawah pada tautan di dalam tooltip */
+.tooltip-content-inner a {
+    text-decoration: none;
 }
 
 /* Saat kelas 'visible' ditambahkan, tampilkan tooltip */
@@ -57,4 +49,32 @@
     visibility: visible;
     opacity: 1;
     transform: translateX(-50%) translateY(0);
+}
+
+/* Media query untuk tampilan desktop agar tooltip di kanan */
+@media (min-width: 769px) {
+    .tooltip-container {
+        /* Posisikan di kanan tautan */
+        top: -10px;
+        left: 100%;
+        transform: translateX(10px) translateY(0);
+    }
+    
+    /* Panah di sebelah kiri tooltip untuk desktop */
+    .tooltip-container::before {
+        content: "";
+        position: absolute;
+        bottom: auto;
+        top: 15px;
+        right: 100%;
+        margin-left: 0;
+        border-width: 8px;
+        border-style: solid;
+        border-color: transparent var(--ds-body-bg) transparent transparent;
+    }
+    
+    /* Aturan untuk tooltip di desktop agar muncul di kanan */
+    .tooltip-container.visible {
+        transform: translateX(0) translateY(0);
+    }
 }
