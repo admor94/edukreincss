@@ -1,9 +1,32 @@
-<div class="responsive-table">
-  <table border="1" cellspacing="0" cellpadding="8" style="width:100%; border-collapse: collapse; text-align:left;">
-    </table>
-</div>
-
+/* Aturan dasar untuk membuat tabel responsif */
 .responsive-table {
   overflow-x: auto;
-  /* Aturan lain jika perlu, misalnya styling untuk scrollbar */
+}
+
+/* Aturan untuk tabel halaman statis */
+.static-page-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  border: 1px solid black;
+}
+
+.static-page-table th, .static-page-table td {
+  border: 1px solid black;
+  padding: 8px;
+}
+
+.table-header {
+  background: #f2f2f2;
+}
+
+/* Aturan lain untuk tampilan halaman */
+.wrapper-xy {
+  max-width: 980px;
+  margin: auto;
+}
+.card {
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  padding: 2rem;
+  border-radius: 0.5rem;
 }
