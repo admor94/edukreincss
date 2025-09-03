@@ -102,7 +102,7 @@ Untuk Warna disini!
     radial-gradient(at 80% 0%, var(--ds-blue) 0px, transparent 50%),
     radial-gradient(at 50% 100%, var(--ds-green) 0px, transparent 50%);
   background-size: 200% 200%;
-  animation: auroraEffect 11s ease-in-out infinite;
+  animation: auroraEffect 17s ease-in-out infinite;
 }
 
 /* ------------------------------------------- */
