@@ -1,5 +1,5 @@
 /* --- [FINAL] Menyembunyikan Tombol Share di Halaman Statis --- */
-body.staticpage .static-page-custom #article-share {
+body.staticpage .static-page-custom section#article-share {
   display: none !important;
   visibility: hidden !important;
   opacity: 0 !important;
