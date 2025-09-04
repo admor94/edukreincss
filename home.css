@@ -1,4 +1,8 @@
 /* --- [KODE BARU] Accordion Minimalis dengan Border Primary --- */
+/* Meratakan teks di dalam accordion ke kiri */
+.accordion-custom .accordion-body {
+  text-align: left;
+}
 
 /* Kontainer utama setiap item accordion */
 .accordion-custom .accordion-item {
@@ -21,7 +25,7 @@
 .accordion-custom .accordion-header .accordion-button {
   background-color: transparent; /* Dihapus: Warna krem/abu-abu */
   color: var(--ds-body-color);
-  padding: 0.75rem 1rem; /* TAMBAHKAN BARIS INI */
+  padding: 0.5rem o.75rem; /* TAMBAHKAN BARIS INI */
 }
 
 /* Tombol header accordion (saat terbuka) */
@@ -52,19 +56,24 @@
   transform: none; /* Reset transform dari ikon sebelumnya */
 }
 
-/* --- [FIX] Penyesuaian Ikon untuk Mode Gelap --- */
+/* --- [KODE BARU] Perbaikan Final untuk Mode Gelap --- */
 
-/* Ikon (+) saat accordion tertutup (Mode Gelap) */
-[data-bs-theme="dark"] .accordion-custom .accordion-button::after {
+/* [INI ATURAN BARU YANG PENTING] Mengatur warna teks tombol saat TERTUTUP di mode gelap */
+[data-bs-theme="dark"] .accordion-custom .accordion-button.collapsed {
+  color: var(--ds-emphasis-color); /* Warna terang untuk teks */
+}
+
+/* Mengatur warna teks tombol saat TERBUKA di mode gelap (tetap sama) */
+[data-bs-theme="dark"] .accordion-custom .accordion-button:not(.collapsed) {
+  color: var(--ds-primary); /* Warna primer saat aktif */
+}
+
+/* Mengubah ikon (+) menjadi warna terang di mode gelap */
+[data-bs-theme="dark"] .accordion-custom .accordion-button.collapsed::after {
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23ffffff'%3e%3cpath fill-rule='evenodd' d='M14.5 1a.5.5 0 0 0-.5.5v13a.5.5 0 0 0 1 0v-13a.5.5 0 0 0-.5-.5m-13 0a.5.5 0 0 0-.5.5v13a.5.5 0 0 0 1 0v-13a.5.5 0 0 0-.5-.5'/%3e%3cpath d='M6 13a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1z'/%3e%3c/svg%3e");
 }
 
-/* Ikon (-) saat accordion terbuka (Mode Gelap) */
+/* Mengubah ikon (-) menjadi warna terang di mode gelap */
 [data-bs-theme="dark"] .accordion-custom .accordion-button:not(.collapsed)::after {
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23ffffff'%3e%3cpath fill-rule='evenodd' d='M1 1.5a.5.5 0 0 0 .5.5h13a.5.5 0 0 0 0-1h-13a.5.5 0 0 0-.5.5m0 13a.5.5 0 0 0 .5.5h13a.5.5 0 0 0 0-1h-13a.5.5 0 0 0-.5.5'/%3e%3cpath d='M2 7a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1z'/%3e%3c/svg%3e");
-}
-
-/* Meratakan teks di dalam accordion ke kiri */
-.accordion-custom .accordion-body {
-  text-align: left;
 }
