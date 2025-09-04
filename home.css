@@ -1,15 +1,15 @@
+/* --- [KODE BARU] Accordion Minimalis dengan Border Primary --- */
 
-/* --- [MODIFIKASI] Desain Accordion FAQ Unik --- */
-
+/* Kontainer utama setiap item accordion */
 .accordion-custom .accordion-item {
-  /* Diubah agar border lebih samar/halus */
-  border: 0px solid rgba(var(--ds-primary-rgb), 0.3); 
-
+  /* Diubah: Border solid 1px dengan warna primer */
+  border: 1px solid var(--ds-primary);
+  
+  background-color: transparent; /* Dibuat transparan */
+  box-shadow: none; /* Memastikan tidak ada bayangan */
   border-radius: var(--ds-border-radius-lg) !important;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.5rem; /* Jarak antar item tetap 0.5rem */
   overflow: hidden;
-  box-shadow: none; /* Dihapus */
-  background-color: transparent; /* Dihapus */
 }
 
 .accordion-custom .accordion-item:first-of-type,
@@ -17,17 +17,25 @@
   border-radius: var(--ds-border-radius-lg) !important;
 }
 
+/* Tombol header accordion (saat tertutup) */
 .accordion-custom .accordion-header .accordion-button {
-  background-color: var(--ds-tertiary-bg);
+  background-color: transparent; /* Dihapus: Warna krem/abu-abu */
   color: var(--ds-body-color);
 }
 
-/* Menghilangkan bayangan default saat tombol aktif */
+/* Tombol header accordion (saat terbuka) */
+.accordion-custom .accordion-button:not(.collapsed) {
+  background-color: transparent; /* Tetap transparan saat dibuka */
+  color: var(--ds-primary); /* Warna teks berubah menjadi warna primer */
+  box-shadow: none;
+}
+
+/* Menghilangkan bayangan default saat tombol di-klik/focus */
 .accordion-custom .accordion-button:focus {
   box-shadow: none;
 }
 
-/* Mengganti ikon panah default dengan ikon Plus (+) */
+/* Styling untuk ikon plus (+) dan minus (-) */
 .accordion-custom .accordion-button::after {
   content: '';
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23212529'%3e%3cpath fill-rule='evenodd' d='M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2Z'/%3e%3c/svg%3e");
@@ -35,13 +43,7 @@
   transform: scale(1.1);
 }
 
-/* Mengganti ikon menjadi Minus (-) saat accordion terbuka */
 .accordion-custom .accordion-button:not(.collapsed)::after {
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23212529'%3e%3cpath fill-rule='evenodd' d='M2 8a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11A.5.5 0 0 1 2 8Z'/%3e%3c/svg%3e");
-  transform: scale(1.1) rotate(0deg); /* Tidak perlu berputar */
-}
-
-/* Meratakan teks di dalam accordion ke kiri */
-.accordion-custom .accordion-body {
-  text-align: left;
+  transform: scale(1.1) rotate(0deg);
 }
