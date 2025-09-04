@@ -229,3 +229,138 @@ Untuk Warna disini!
     radial-gradient(at 0% 100%, var(--ds-green) 0px, transparent 50%);
 }
 
+/* --- [STYLE BARU] Kustomisasi Dropdown Google Translate --- */
+
+/* Menghilangkan border dan shadow bawaan yang jelek */
+.goog-te-menu-frame {
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* Kontainer dropdown utama, dibuat mirip Bootstrap Dropdown */
+.goog-te-menu-frame .goog-te-menu2 {
+  background-color: var(--ds-body-bg);
+  border: 1px solid var(--ds-border-color-translucent);
+  border-radius: var(--ds-border-radius-lg);
+  box-shadow: var(--ds-box-shadow-lg);
+  padding: 0.5rem 0;
+  margin-top: 0.5rem; /* Memberi sedikit jarak dari ikon */
+}
+
+/* Judul "Pilih Bahasa" */
+.goog-te-menu2-title {
+  padding: 0.5rem 1.25rem;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--ds-secondary-color);
+  border-bottom: 1px solid var(--ds-border-color);
+}
+
+/* Setiap item bahasa di dalam dropdown */
+.goog-te-menu2-item,
+.goog-te-menu2-item-selected {
+  padding: 0.25rem 1.25rem;
+}
+
+.goog-te-menu2-item .text,
+.goog-te-menu2-item-selected .text {
+  font-weight: 500 !important;
+  color: var(--ds-body-color) !important;
+}
+
+/* Efek hover pada item bahasa */
+.goog-te-menu2-item:hover {
+  background-color: var(--ds-tertiary-bg);
+}
+
+.goog-te-menu2-item:hover .text {
+  color: var(--ds-emphasis-color) !important;
+}
+
+/* Menyesuaikan warna teks di mode gelap */
+[data-bs-theme="dark"] .goog-te-menu2-item .text,
+[data-bs-theme="dark"] .goog-te-menu2-item-selected .text {
+  color: var(--ds-emphasis-color) !important;
+}
+
+
+/* --- [KODE BARU] Accordion Minimalis dengan Border Primary --- */
+/* Meratakan teks di dalam accordion ke kiri */
+.accordion-custom .accordion-body {
+  text-align: left;
+}
+
+/* Kontainer utama setiap item accordion */
+.accordion-custom .accordion-item {
+  /* Diubah: Border solid 1px dengan warna primer */
+  border: 1px solid var(--ds-primary);
+  
+  background-color: transparent; /* Dibuat transparan */
+  box-shadow: none; /* Memastikan tidak ada bayangan */
+  border-radius: var(--ds-border-radius-lg) !important;
+  margin-bottom: 0.5rem; /* Jarak antar item tetap 0.5rem */
+  overflow: hidden;
+}
+
+.accordion-custom .accordion-item:first-of-type,
+.accordion-custom .accordion-item:last-of-type {
+  border-radius: var(--ds-border-radius-lg) !important;
+}
+
+/* Tombol header accordion (saat tertutup) */
+.accordion-custom .accordion-header .accordion-button {
+  background-color: transparent; /* Dihapus: Warna krem/abu-abu */
+  color: var(--ds-body-color);
+  padding: 0.5rem o.75rem; /* TAMBAHKAN BARIS INI */
+}
+
+/* Tombol header accordion (saat terbuka) */
+.accordion-custom .accordion-button:not(.collapsed) {
+  background-color: transparent; /* Tetap transparan saat dibuka */
+  color: var(--ds-primary); /* Warna teks berubah menjadi warna primer */
+  box-shadow: none;
+}
+
+/* Menghilangkan bayangan default saat tombol di-klik/focus */
+.accordion-custom .accordion-button:focus {
+  box-shadow: none;
+}
+
+/* --- [KODE BARU] Mengganti Ikon Accordion --- */
+
+/* Ikon (+) saat accordion tertutup (Mode Terang) */
+.accordion-custom .accordion-button::after {
+  content: '';
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23212529'%3e%3cpath fill-rule='evenodd' d='M14.5 1a.5.5 0 0 0-.5.5v13a.5.5 0 0 0 1 0v-13a.5.5 0 0 0-.5-.5m-13 0a.5.5 0 0 0-.5.5v13a.5.5 0 0 0 1 0v-13a.5.5 0 0 0-.5-.5'/%3e%3cpath d='M6 13a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1z'/%3e%3c/svg%3e");
+  transition: transform 0.2s ease-in-out;
+  transform: none; /* Reset transform dari ikon sebelumnya */
+}
+
+/* Ikon (-) saat accordion terbuka (Mode Terang) */
+.accordion-custom .accordion-button:not(.collapsed)::after {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23212529'%3e%3cpath fill-rule='evenodd' d='M1 1.5a.5.5 0 0 0 .5.5h13a.5.5 0 0 0 0-1h-13a.5.5 0 0 0-.5.5m0 13a.5.5 0 0 0 .5.5h13a.5.5 0 0 0 0-1h-13a.5.5 0 0 0-.5.5'/%3e%3cpath d='M2 7a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1z'/%3e%3c/svg%3e");
+  transform: none; /* Reset transform dari ikon sebelumnya */
+}
+
+/* --- [KODE BARU] Perbaikan Final untuk Mode Gelap --- */
+
+/* [INI ATURAN BARU YANG PENTING] Mengatur warna teks tombol saat TERTUTUP di mode gelap */
+[data-bs-theme="dark"] .accordion-custom .accordion-button.collapsed {
+  color: var(--ds-emphasis-color); /* Warna terang untuk teks */
+}
+
+/* Mengatur warna teks tombol saat TERBUKA di mode gelap (tetap sama) */
+[data-bs-theme="dark"] .accordion-custom .accordion-button:not(.collapsed) {
+  color: var(--ds-primary); /* Warna primer saat aktif */
+}
+
+/* Mengubah ikon (+) menjadi warna terang di mode gelap */
+[data-bs-theme="dark"] .accordion-custom .accordion-button.collapsed::after {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23ffffff'%3e%3cpath fill-rule='evenodd' d='M14.5 1a.5.5 0 0 0-.5.5v13a.5.5 0 0 0 1 0v-13a.5.5 0 0 0-.5-.5m-13 0a.5.5 0 0 0-.5.5v13a.5.5 0 0 0 1 0v-13a.5.5 0 0 0-.5-.5'/%3e%3cpath d='M6 13a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1z'/%3e%3c/svg%3e");
+}
+
+/* Mengubah ikon (-) menjadi warna terang di mode gelap */
+[data-bs-theme="dark"] .accordion-custom .accordion-button:not(.collapsed)::after {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23ffffff'%3e%3cpath fill-rule='evenodd' d='M1 1.5a.5.5 0 0 0 .5.5h13a.5.5 0 0 0 0-1h-13a.5.5 0 0 0-.5.5m0 13a.5.5 0 0 0 .5.5h13a.5.5 0 0 0 0-1h-13a.5.5 0 0 0-.5.5'/%3e%3cpath d='M2 7a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1z'/%3e%3c/svg%3e");
+}
