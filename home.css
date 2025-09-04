@@ -1,16 +1,15 @@
 
 /* --- [MODIFIKASI] Desain Accordion FAQ Unik --- */
 
-/* Kontainer utama dengan class baru kita */
 .accordion-custom .accordion-item {
-  /* BARIS INI YANG DIUBAH */
-  border: 1px solid rgba(var(--ds-primary-rgb), 0.5); 
-  
+  /* Diubah agar border lebih samar/halus */
+  border: 1px solid rgba(var(--ds-primary-rgb), 0.3); 
+
   border-radius: var(--ds-border-radius-lg) !important;
   margin-bottom: 0.5rem;
   overflow: hidden;
-  box-shadow: var(--ds-box-shadow-sm);
-  background-color: var(--ds-body-bg);
+  box-shadow: none; /* Dihapus */
+  background-color: transparent; /* Dihapus */
 }
 
 .accordion-custom .accordion-item:first-of-type,
