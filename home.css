@@ -6,7 +6,7 @@
   border: 0px solid rgba(var(--ds-primary-rgb), 0.3); 
 
   border-radius: var(--ds-border-radius-lg) !important;
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.5rem;
   overflow: hidden;
   box-shadow: none; /* Dihapus */
   background-color: transparent; /* Dihapus */
