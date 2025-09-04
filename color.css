@@ -1,6 +1,6 @@
-/* 
-Untuk Warna disini! 
-*/
+/* ==============================================
+WARNA MODIFIKASI: BUTTON
+============================================== */
 
 /* --- [MODIFIKASI] Tombol CTA Warna Orange --- */
 .btn-cta-wortel {
@@ -18,11 +18,10 @@ Untuk Warna disini!
   box-shadow: 0 4px 8px rgba(0,0,0,0.15);
 }
 
-/*
-==============================================
+
+/* ==============================================
   PERPUSTAKAAN ANIMASI GRADASI - EDUKREIN
-==============================================
-*/
+============================================== */
 
 /* CATATAN PENTING:
   - Sebagian besar animasi ini menggunakan variabel warna dari template Anda 
@@ -178,11 +177,9 @@ Untuk Warna disini!
   animation: gradientRotation 8s linear infinite;
 }
 
-/*
-==============================================
+/* ==============================================
   VARIAN EFEK AURORA - EDUKREIN
-==============================================
-*/
+============================================== */
 
 /* 1. Definisikan Animasi Gerakannya (Cukup Satu Kali) */
 @keyframes auroraEffect {
