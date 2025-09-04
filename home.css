@@ -3,10 +3,12 @@
 
 /* Kontainer utama dengan class baru kita */
 .accordion-custom .accordion-item {
-  border: 1px solid var(--ds-border-color);
-  border-radius: var(--ds-border-radius-lg) !important; /* Membuat sudut lebih bulat */
-  margin-bottom: 0.5rem; /* Memberi jarak antar item */
-  overflow: hidden; /* Penting untuk sudut yang bulat */
+  /* BARIS INI YANG DIUBAH */
+  border: 1px solid rgba(var(--ds-primary-rgb), 0.5); 
+  
+  border-radius: var(--ds-border-radius-lg) !important;
+  margin-bottom: 0.5rem;
+  overflow: hidden;
   box-shadow: var(--ds-box-shadow-sm);
   background-color: var(--ds-body-bg);
 }
