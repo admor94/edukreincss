@@ -2,57 +2,29 @@
 TAMPILAN DI HOME: GOOGLE TRANSLATE
 ============================================== */
 
-/* Menghilangkan border dan shadow bawaan yang jelek */
-.goog-te-menu-frame {
-  border: none !important;
-  box-shadow: none !important;
-}
-
-/* Kontainer dropdown utama, dibuat mirip Bootstrap Dropdown */
-.goog-te-menu-frame .goog-te-menu2 {
-  background-color: var(--ds-body-bg);
+.lang-menu {
+  position: absolute;
+  right: 0; top: 100%;
+  min-width: 12rem;
+  background: var(--ds-body-bg);
   border: 1px solid var(--ds-border-color-translucent);
   border-radius: var(--ds-border-radius-lg);
   box-shadow: var(--ds-box-shadow-lg);
-  padding: 0.5rem 0;
-  margin-top: 0.5rem; /* Memberi sedikit jarak dari ikon */
+  padding: .5rem 0;
+  margin-top: .5rem;
+  z-index: 1000;
 }
-
-/* Judul "Pilih Bahasa" */
-.goog-te-menu2-title {
-  padding: 0.5rem 1.25rem;
-  margin-bottom: 0.5rem;
-  font-size: 0.9rem;
-  font-weight: 600;
-  color: var(--ds-secondary-color);
-  border-bottom: 1px solid var(--ds-border-color);
+.lang-menu [data-lang] {
+  display: block;
+  padding: .375rem .875rem;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  color: var(--ds-body-color);
 }
-
-/* Setiap item bahasa di dalam dropdown */
-.goog-te-menu2-item,
-.goog-te-menu2-item-selected {
-  padding: 0.25rem 1.25rem;
-}
-
-.goog-te-menu2-item .text,
-.goog-te-menu2-item-selected .text {
-  font-weight: 500 !important;
-  color: var(--ds-body-color) !important;
-}
-
-/* Efek hover pada item bahasa */
-.goog-te-menu2-item:hover {
-  background-color: var(--ds-tertiary-bg);
-}
-
-.goog-te-menu2-item:hover .text {
-  color: var(--ds-emphasis-color) !important;
-}
-
-/* Menyesuaikan warna teks di mode gelap */
-[data-bs-theme="dark"] .goog-te-menu2-item .text,
-[data-bs-theme="dark"] .goog-te-menu2-item-selected .text {
-  color: var(--ds-emphasis-color) !important;
+.lang-menu [data-lang]:hover {
+  background: var(--ds-tertiary-bg);
+  color: var(--ds-emphasis-color);
 }
 
 
