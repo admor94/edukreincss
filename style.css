@@ -1,25 +1,4 @@
 /* ==============================================
-TAMPILAN DI HOME: GOOGLE TRANSLATE
-============================================== */
-.dropdown { position: relative; display:inline-block; }
-.dropdown-menu {
-  position: absolute;
-  right: 0; top: 100%;
-  background: white;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  box-shadow: 0 0.5rem 1rem rgba(0,0,0,.15);
-  padding: .25rem 0;
-  z-index: 1000;
-}
-.dropdown-item {
-  display:block; padding:.5rem 1rem;
-  background:none; border:0; width:100%; text-align:left;
-}
-.dropdown-item:hover { background:#f8f9fa; cursor:pointer; }
-
-
-/* ==============================================
 TAMPILAN DI HOME: ACCORDIAN FAQ
 ============================================== */
 
